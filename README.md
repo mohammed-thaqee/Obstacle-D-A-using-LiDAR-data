@@ -18,17 +18,17 @@ The system achieves ~91% accuracy in collision risk prediction and ~76% accuracy
 Project Structure
 
 .
-├── .gitignore              # Git ignore file  
-├── README.md               # Project documentation  
-├── check_labels.py         # Utility to check dataset label distribution  
-├── export_pcd.py           # Export LiDAR scans into PCD format  
-├── figures.py              # Script to generate plots and figures  
-├── lidar_sim_3d_dataset.py # LiDAR simulation and dataset generation  
-├── preprocess_lidar.py     # Data preprocessing (scaling, encoding)  
-├── train_models.py         # Training and evaluation of ML models (Risk + Maneuver)  
-├── test.csv                # Sample test dataset  
-├── scan_0000.pcd           # Example LiDAR point cloud file  
-├── scan_0001.pcd           # Example LiDAR point cloud file  
+├── .gitignore              Git ignore file  
+├── README.md               Project documentation  
+├── check_labels.py         Utility to check dataset label distribution  
+├── export_pcd.py           Export LiDAR scans into PCD format  
+├── figures.py              Script to generate plots and figures  
+├── lidar_sim_3d_dataset.py LiDAR simulation and dataset generation  
+├── preprocess_lidar.py     Data preprocessing (scaling, encoding)  
+├── train_models.py         Training and evaluation of ML models (Risk + Maneuver)  
+├── test.csv                Sample test dataset  
+├── scan_0000.pcd           Example LiDAR point cloud file  
+├── scan_0001.pcd           Example LiDAR point cloud file  
 ├── scan_0002.pcd  
 ├── scan_0003.pcd  
 ├── scan_0004.pcd  
