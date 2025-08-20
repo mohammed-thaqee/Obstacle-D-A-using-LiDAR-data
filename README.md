@@ -120,4 +120,4 @@ Use class weighting or SMOTE oversampling to address imbalance.
 Experiment with ensemble learning and hyperparameter tuning for higher F1-scores.
 
 
-I hope to continuosly add on to the work I have done so far. I am also eager on bringing this to a fully functional prototype. If you'd like to contribute or collaborate it would be great. You can find my LinkedIn profile here:
+I hope to continuously add on to the work I have done so far. I am also eager on bringing this to a fully functional prototype. If you'd like to contribute or collaborate it would be great. You can find my LinkedIn profile on the main profile page.
