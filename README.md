@@ -43,33 +43,45 @@ Install the dependencies using:
 pip install -r requirements.txt
 
 
-Quick Start to run the repo
+Usage:
+Follow these steps to generate the dataset, preprocess it, train the models, and evaluate performance.
 
-1. Generate dataset
-   Run the simulator to generate LiDAR training and testing data:
+1. Generate LiDAR Simulation Data
+   This step creates synthetic 3D LiDAR scans with obstacles and corresponding maneuver labels.
 
    python lidar_sim_3d_dataset.py
 
-   This will create train.csv and test.csv inside the project directory.
-2. Preprocess Data
-   Preprocess the generated datasets (scaling + encoding):
+   Generates train.csv and test.csv inside the project folder.
+   Also produces .pcd files (scan_0000.pcd, scan_0001.pcd, …) that represent LiDAR point clouds.
 
-   python preprocess_lidar.py
-
-   This will also save the scaler and encoders (scaler.pkl, relvel_encoder.pkl) for later use.
-
-3. Check Label distribution (optional, if you want to know the number of individual cases generated in both test and train)
-   Inspect how balanced the dataset is:
+2. Check Label Distribution
+   To inspect the distribution of maneuvers (maintain, stop, turn_left, turn_right) in the generated dataset:
 
    python check_labels.py
 
-4. Train Models
-   Train and evaluate both the collision risk model and the maneuver recommendation model:
+3. Preprocess Data
+   Convert raw LiDAR simulation data into numerical features for training and testing.
+
+   python preprocess_lidar.py
+
+   Outputs processed features.
+   Saves preprocessing artifacts like scaler and encoders (scaler.pkl, relvel_encoder.pkl).
+
+4. Train & Evaluate Models
+   Train machine learning models (Random Forest) for:
+
+   Collision Risk Prediction (binary: risk/no risk)
+   Maneuver Recommendation (multi-class: maintain, stop, turn_left, turn_right)
 
    python train_models.py
 
-5. Export LiDAR scans to PCD
-   If you want point cloud files for visualization
+   This prints:
+
+   Classification Reports (precision, recall, f1-score)
+   Confusion Matrices for collision risk and maneuver prediction.
+
+5. Export Point Clouds (Optional)
+   Convert LiDAR data to .pcd format for visualization in external tools (e.g., CloudCompare, Meshlab).
 
    python export_pcd.py
 
