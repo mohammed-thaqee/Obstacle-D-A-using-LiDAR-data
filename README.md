@@ -44,6 +44,7 @@ pip install -r requirements.txt
 
 
 Usage:
+
 Follow these steps to generate the dataset, preprocess it, train the models, and evaluate performance.
 
 1. Generate LiDAR Simulation Data
@@ -88,3 +89,35 @@ Follow these steps to generate the dataset, preprocess it, train the models, and
 6. Generate visualizations (optional, to generate plots of the data used for training and testing)
 
    python figures.py
+
+Future Work:
+
+This project serves as a foundational step toward autonomous navigation using LiDAR data. Several enhancements can be pursued in the future:
+
+Improved Data Generation
+
+Balance maneuver classes (stop, turn_left, turn_right) further.
+Introduce more diverse obstacle shapes, speeds, and trajectories.
+
+Advanced Models
+
+Extend beyond Random Forests to Deep Learning approaches (e.g., CNNs, RNNs, Transformers) for spatiotemporal LiDAR analysis.
+Explore reinforcement learning for decision-making.
+
+Realistic Simulation
+
+Integrate with Gazebo / CARLA simulators to model realistic robot or autonomous car movement.
+Simulate both stationary and moving robot scenarios.
+
+Real-world Deployment
+
+Connect to actual LiDAR sensor hardware.
+Deploy trained models on embedded devices for real-time obstacle detection and avoidance.
+
+Performance Improvements
+
+Use class weighting or SMOTE oversampling to address imbalance.
+Experiment with ensemble learning and hyperparameter tuning for higher F1-scores.
+
+
+I hope to continuosly add on to the work I have done so far. I am also eager on bringing this to a fully functional prototype. If you'd like to contribute or collaborate it would be great. You can find my LinkedIn profile here:
